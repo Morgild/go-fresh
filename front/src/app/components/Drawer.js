@@ -5,7 +5,7 @@ export const Drawer = () => {
   const { showDrawer, setShowDrawer, basket, sumBasket, numberFormat } =
     useData();
   return (
-    <div className="absolute">
+    <div className="fixed overflow-hidden">
       {showDrawer && (
         <div
           onClick={() => {
@@ -15,23 +15,23 @@ export const Drawer = () => {
         ></div>
       )}
       <div
-        className={`fixed transition flex flex-col justify-between gap-10 bg-white h-[100vh] top-0 z-[30] w-full md:w-[30%] ${
+        className={`fixed transition flex flex-col justify-between bg-white h-[100vh] top-0 z-[30] w-full md:w-[30%] ${
           showDrawer ? "right-0" : "left-[100%]"
         } right-0`}
       >
-        <div className="flex flex-col justify-start p-6">
-          <div className="flex justify-between items-center relative pb-2">
-            <p
-              onClick={() => {
-                setShowDrawer(false);
-              }}
-              className="py-0.5 px-1.5 absolute left-0 bg-white h-full flex items-center cursor-pointer"
-            >
-              <FaChevronLeft />
-            </p>
-            <p className="text-xl w-full text-center text-black">Таны сагс</p>
-          </div>
-          <div className="relative">
+        <div className="flex justify-between items-center relative bg-main p-3">
+          <p
+            onClick={() => {
+              setShowDrawer(false);
+            }}
+            className="py-0.5 px-1.5 absolute left-0 bg-white h-full flex items-center cursor-pointer"
+          >
+            <FaChevronLeft />
+          </p>
+          <p className="text-xl w-full text-center text-black">Таны сагс</p>
+        </div>
+        <div className="flex flex-col justify-between p-6 overflow-y-auto">
+          <div className="flex flex-col justify-between h-full ">
             {basket.map((item, index) => (
               <BasketFoodCard
                 key={index}

@@ -1,9 +1,14 @@
 "use client";
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
-  useEffect(() => {}, []);
-  return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
+  const [isReady, setIsReady] = useState(true);
+
+  return (
+    <AuthContext.Provider value={{ isReady, setIsReady }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
-export const useAuth = () => useContext(AuthContextContext);
+export const useAuth = () => useContext(AuthContext);

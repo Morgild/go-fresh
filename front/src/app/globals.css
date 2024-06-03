@@ -26,6 +26,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

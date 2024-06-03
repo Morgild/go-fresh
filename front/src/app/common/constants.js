@@ -4,7 +4,7 @@ export const navItem = [
 ];
 export const foodList = [
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Хуйцай",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -12,7 +12,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Банштай ногоотой шөл",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -20,7 +20,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Банштай хар шөл",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -28,7 +28,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Гурилтай шөл",
     foodPrice: 9500,
     foodImg: "/chicken.webp",
@@ -36,7 +36,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Жигнэсэн гурилтай шөл",
     foodPrice: 9500,
     foodImg: "/chicken.webp",
@@ -44,7 +44,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Банштай цай",
     foodPrice: 9500,
     foodImg: "/chicken.webp",
@@ -52,7 +52,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "1-Р ХООЛ",
+    category: "1-р хоол",
     foodName: "Бантан",
     foodPrice: 9500,
     foodImg: "/chicken.webp",
@@ -60,7 +60,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Гахайн мах",
     foodPrice: 14500,
     foodImg: "/chicken.webp",
@@ -68,7 +68,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Тахианы мах",
     foodPrice: 14500,
     foodImg: "/chicken.webp",
@@ -76,7 +76,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Гуляш",
     foodPrice: 11000,
     foodImg: "/chicken.webp",
@@ -84,7 +84,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Нарийн махан хуурга",
     foodPrice: 11000,
     foodImg: "/chicken.webp",
@@ -92,7 +92,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Өндөгтэй хуурга",
     foodPrice: 11000,
     foodImg: "/chicken.webp",
@@ -100,7 +100,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Соустай бөөрөнхий мах",
     foodPrice: 11000,
     foodImg: "/chicken.webp",
@@ -108,7 +108,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Бүрмэл шницель",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -116,7 +116,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Цуйван",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -124,7 +124,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Өндөгтэй бифштекс",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -132,7 +132,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Сыртэй бифштекс",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -140,7 +140,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Тефтель",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -148,7 +148,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Өндөгтэй бифштекс",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -156,7 +156,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Төмсний хучмал",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -164,7 +164,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Будаатай хуурга",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -172,7 +172,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Шарсан зайдас",
     foodPrice: 10000,
     foodImg: "/chicken.webp",
@@ -180,7 +180,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Соустай будаа",
     foodPrice: 5000,
     foodImg: "/chicken.webp",
@@ -188,7 +188,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Хачиртай хуушуур 5ш",
     foodPrice: 11500,
     foodImg: "/chicken.webp",
@@ -196,7 +196,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "2-Р ХООЛ",
+    category: "2-р хоол",
     foodName: "Хачиртай хуушуур 3ш",
     foodPrice: 8500,
     foodImg: "/chicken.webp",
@@ -204,7 +204,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "САЛАТ",
+    category: "Салат",
     foodName: "Өндөгний салат",
     foodPrice: 6000,
     foodImg: "/chicken.webp",
@@ -212,7 +212,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "САЛАТ",
+    category: "Салат",
     foodName: "Нийслэл салат",
     foodPrice: 5000,
     foodImg: "/chicken.webp",
@@ -220,7 +220,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "САЛАТ",
+    category: "Салат",
     foodName: "Байцааны салат",
     foodPrice: 4000,
     foodImg: "/chicken.webp",
@@ -228,7 +228,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "САЛАТ",
+    category: "Салат",
     foodName: "Луувангийн салат",
     foodPrice: 4000,
     foodImg: "/chicken.webp",
@@ -236,7 +236,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Хуушуур",
     foodPrice: 2000,
     foodImg: "/chicken.webp",
@@ -244,7 +244,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Мантуун бууз",
     foodPrice: 2000,
     foodImg:
@@ -253,7 +253,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Жигнэсэн ороомог",
     foodPrice: 2000,
     foodImg: "/chicken.webp",
@@ -261,7 +261,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Шарсан ороомог",
     foodPrice: 2200,
     foodImg: "/chicken.webp",
@@ -269,7 +269,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Шарсан өндөг",
     foodPrice: 1000,
     foodImg: "/chicken.webp",
@@ -277,7 +277,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Чанасан өндөг",
     foodPrice: 1000,
     foodImg: "/chicken.webp",
@@ -285,7 +285,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Бин",
     foodPrice: 700,
     foodImg: "/chicken.webp",
@@ -293,7 +293,7 @@ export const foodList = [
     foodIngredient: "Мах, гурил, давс",
   },
   {
-    category: "ШИРХЭГИЙН ХООЛ",
+    category: "Ширхэгийн хоол",
     foodName: "Мантуу",
     foodPrice: 700,
     foodImg:
@@ -303,10 +303,3 @@ export const foodList = [
   },
 ];
 export const phoneNumber = ["88657751", "94627751"];
-export const categories = [
-  { text: "Бүгд", value: "" },
-  { text: "1-р хоол", value: "1-Р ХООЛ" },
-  { text: "2-р хоол", value: "2-Р ХООЛ" },
-  { text: "Салат", value: "САЛАТ" },
-  { text: "Ширхэгийн хоол", value: "ШИРХЭГИЙН ХООЛ" },
-];

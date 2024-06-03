@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { FloatingBasket } from "./components/FloatingBasket";
 import { DataProvider } from "./components/providers/DataProvider";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { AuthProvider } from "./components/providers/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +17,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <UserProvider>
-          <DataProvider>
-            <Header />
-            <div className="relative">{children}</div>
-            <FloatingBasket />
-            <Footer />
-          </DataProvider>
+          <AuthProvider>
+            <DataProvider>
+              <Header />
+              <div className="relative">{children}</div>
+              <FloatingBasket />
+              <Footer />
+            </DataProvider>
+          </AuthProvider>
         </UserProvider>
       </body>
     </html>
