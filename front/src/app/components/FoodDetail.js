@@ -30,13 +30,13 @@ export const FoodDetail = ({
         }}
         className="fixed z-30 top-0 left-0 h-screen w-screen bg-[#00000080]"
       ></div>
-      <div className="flex flex-col md:flex-row max-w-[981px] w-[90%] md:w-[800px] p-4 md:p-8 gap-4 rounded-lg md:rounded-2xl bg-white  absolute z-30 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
+      <div className="flex flex-col md:flex-row max-w-[800px] w-[90%] md:w-[700px] p-4 md:p-8 gap-4 rounded-lg md:rounded-2xl bg-white  absolute z-30 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
         <div className="md:w-1/2 w-full aspect-[2/1] overflow-hidden rounded-md md:rounded-lg relative">
           <Image
             alt="food image"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             fill
-            src={foodImg}
+            src={foodImg ? foodImg : "/gofresh.png"}
             sizes="medium"
           />
         </div>

@@ -5,9 +5,15 @@ import { useData } from "./providers/DataProvider";
 export const BasketFoodCard = (props) => {
   const { basket, setBasket, numberFormat } = useData();
   return (
-    <div className="flex w-full p-3 gap-2 border-b border-b-[#D6D8DB]">
-      <figure className="w-1/2 aspect-[2/1] relative bg-gray rounded-lg overflow-hidden">
-        <Image alt="food image" objectFit="cover" src={props.foodImg} fill />
+    <div className="flex w-full p-3 gap-2 border-t border-t-[#D6D8DB]">
+      <figure className="w-1/2 aspect-[2/1] relative bg-gray rounded-lg overflow-hidden border border-gray">
+        <Image
+          alt="food image"
+          style={{ objectFit: "cover" }}
+          src={props.foodImg ? props.foodImg : "/gofresh.png"}
+          fill
+          sizes="small"
+        />
       </figure>
       <div className="flex w-1/2 flex-col gap-2">
         <div className="flex items-center justify-between px-2">

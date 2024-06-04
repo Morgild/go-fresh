@@ -1,31 +1,30 @@
 "use client";
 import { foodList } from "../common/constants";
 import { FoodCard } from "./FoodCard";
-import { ProfileDropDown } from "./ProfileDropdown";
 import { SalesTitle } from "./SalesTitle";
 import { useData } from "./providers/DataProvider";
 
 export const Menu = () => {
-  const { searchValue } = useData();
+  const { searchValue, foods } = useData();
   return (
     <section className="py-10">
       <div className="max-w-[1280px] m-auto">
         <SalesTitle title="Эрэлт ихтэй хоолнууд" />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {foodList
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          {foods
             .filter((food) =>
-              food.foodName
+              food.foodname
                 .toLocaleLowerCase()
                 .includes(searchValue.toLocaleLowerCase())
             )
             .map((food, index) => (
               <FoodCard
                 key={index}
-                foodName={food.foodName}
-                foodPrice={food.foodPrice}
-                foodImg={food.foodImg}
-                foodCategory={food.category}
-                foodIngredient={food.foodIngredient}
+                foodName={food.foodname}
+                foodPrice={food.foodprice}
+                foodImg={food.foodimg}
+                foodCategory={food.foodcategory}
+                foodIngredient={food.foodingredient}
               />
             ))}
         </div>

@@ -19,8 +19,9 @@ export const FoodCard = (props) => {
           <Image
             style={{ objectFit: "cover" }}
             alt="food"
-            src={props.foodImg}
+            src={props.foodImg ? props.foodImg : "/gofresh.png"}
             fill
+            sizes="medium"
           />
         </figure>
         <div className="font-semibold">

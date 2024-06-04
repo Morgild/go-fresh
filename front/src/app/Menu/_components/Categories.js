@@ -5,7 +5,7 @@ import { useData } from "@/app/components/providers/DataProvider";
 export const Categories = (props) => {
   const { categories } = useData();
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 py-8 px-3">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 py-8 px-3">
       {categories.map((category, index) => (
         <div
           key={index}

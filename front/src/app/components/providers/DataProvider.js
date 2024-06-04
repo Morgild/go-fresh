@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { api } from "@/app/common/axios";
 import { AxiosError } from "axios";
 import { useAuth } from "./AuthProvider";
+import { getAccessToken, withApiAuthRequired } from "@auth0/nextjs-auth0";
 
 const DataContext = createContext();
 export const DataProvider = ({ children }) => {
@@ -12,12 +13,22 @@ export const DataProvider = ({ children }) => {
   const [showDrawer, setShowDrawer] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [categories, setCategories] = useState([]);
+  const [foods, setFoods] = useState([]);
 
-  //get Categories function
   const getCategories = async () => {
     try {
-      const { data } = await api.get("/food/categories");
+      const { data } = await api.get("/food/foodCategories");
       setCategories(data);
+    } catch (error) {
+      console.log(error), "FFF";
+    }
+  };
+
+  const getFoods = async () => {
+    try {
+      const { data } = await api.get("/food/foods");
+      setFoods(data.foods);
+      console.log(data);
     } catch (error) {
       console.log(error), "FFF";
     }
@@ -49,11 +60,12 @@ export const DataProvider = ({ children }) => {
     const fetchData = async () => {
       setIsReady(false);
       await getCategories();
+      await getFoods();
       setIsReady(true);
     };
     fetchData();
   }, []);
-  console.log("cat", categories);
+
   return (
     <DataContext.Provider
       value={{
@@ -66,6 +78,8 @@ export const DataProvider = ({ children }) => {
         searchValue,
         setSearchValue,
         categories,
+        foods,
+        setFoods,
       }}
     >
       <div className={`${showDrawer && "modal-open"}`}>{children}</div>
