@@ -2,7 +2,7 @@
 // import { categories } from "@/app/common/constants";
 import { useData } from "@/app/components/providers/DataProvider";
 
-export const Categories = (props) => {
+export const Categories = ({ filterCategory, setFilterCategory }) => {
   const { categories } = useData();
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-3 py-8 px-3">
@@ -10,15 +10,15 @@ export const Categories = (props) => {
         <div
           key={index}
           onClick={() => {
-            props.setCategory(category.foodcategory);
+            setFilterCategory(category.name);
           }}
           className={`flex w-full py-2 px-4 rounded-lg items-center justify-center border border-[#D6D8DB] cursor-pointer ${
-            category.foodcategory == props.category
+            category.name == filterCategory
               ? "bg-main text-white"
               : "bg-white text-black"
           }`}
         >
-          <p className="text-lg">{category.foodcategory}</p>
+          <p className="text-lg">{category.name}</p>
         </div>
       ))}
     </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { useData } from "./providers/DataProvider";
-export const BasketFoodCard = (props) => {
+export const BasketFoodCard = ({ image, name, price, count, ingredient }) => {
   const { basket, setBasket, numberFormat } = useData();
   return (
     <div className="flex w-full p-3 gap-2 border-t border-t-[#D6D8DB]">
@@ -10,18 +10,18 @@ export const BasketFoodCard = (props) => {
         <Image
           alt="food image"
           style={{ objectFit: "cover" }}
-          src={props.foodImg ? props.foodImg : "/gofresh.png"}
+          src={image ? image : "/gofresh.png"}
           fill
           sizes="small"
         />
       </figure>
       <div className="flex w-1/2 flex-col gap-2">
         <div className="flex items-center justify-between px-2">
-          <h3>{props.foodName}</h3>
+          <h3>{name}</h3>
           <IoClose
             onClick={() => {
               const newBasket = basket.filter(
-                (element) => element.foodName != props.foodName
+                (element) => element.name != name
               );
               setBasket(newBasket);
             }}
@@ -30,15 +30,15 @@ export const BasketFoodCard = (props) => {
           />
         </div>
         <p className="text-lg font-bold text-main px-2">
-          {numberFormat.format(props.foodPrice)}₮
+          {numberFormat.format(price)}₮
         </p>
         <div className="flex w-2/3 items-center justify-between text-white">
           <div
             onClick={() => {
               const newBasket = basket.map((element) => {
-                if (element.foodName == props.foodName) {
-                  if (element.foodCount > 1) {
-                    element.foodCount -= 1;
+                if (element.name == name) {
+                  if (element.count > 1) {
+                    element.count -= 1;
                   }
                   return element;
                 } else {
@@ -51,14 +51,12 @@ export const BasketFoodCard = (props) => {
           >
             <FaMinus size={16} />
           </div>
-          <div className="text-black text-lg font-medium ">
-            {props.foodCount}
-          </div>
+          <div className="text-black text-lg font-medium ">{count}</div>
           <div
             onClick={() => {
               const newBasket = basket.map((element) => {
-                if (element.foodName == props.foodName) {
-                  element.foodCount += 1;
+                if (element.name == name) {
+                  element.count += 1;
                   return element;
                 } else {
                   return element;

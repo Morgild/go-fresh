@@ -1,7 +1,8 @@
 const getCategories = "SELECT * FROM category";
 const getCategory = "SELECT * FROM category WHERE id=$1";
-const checkCategoryExists = "SELECT s FROM category s WHERE s.foodcategory=$1";
-const addCategory = "INSERT INTO category (foodcategory) VALUES($1)";
+const checkCategoryExists = "SELECT s FROM category s WHERE s.name=$1";
+const addCategory =
+  "INSERT INTO category (name, status, createdById) VALUES ('Electronics', 'active', '123e4567-e89b-12d3-a456-426614174000')";
 const removeCategory = "DELETE FROM category WHERE id=$1";
 const getFoods = "SELECT * FROM food ORDER BY foodcategory ASC";
 const getFoodCategories =

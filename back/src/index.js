@@ -11,5 +11,5 @@ app.get("/", (req, res) => {
   res.send("Hello");
 });
 
-app.use("/api/v1/food", foodRoutes);
+app.use("/api/v1/", foodRoutes);
 app.listen(port, () => console.log(`listening on port ${port}`));

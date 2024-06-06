@@ -3,28 +3,32 @@ import { useState } from "react";
 import { Categories } from "./_components/Categories";
 import { FoodCard } from "../components/FoodCard";
 import { useData } from "../components/providers/DataProvider";
+import { foodList } from "../common/constants";
 
 export default function MenuPage() {
-  const [category, setCategory] = useState("");
+  const [filterCategory, setFilterCategory] = useState("");
   const { searchValue, foods } = useData();
 
   return (
     <div className="max-w-[1280px] m-auto flex flex-col">
-      <Categories setCategory={setCategory} category={category} />
+      <Categories
+        setFilterCategory={setFilterCategory}
+        filterCategory={filterCategory}
+      />
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 px-3 md:px-0">
-        {foods
-          .filter((food) => food.foodcategory.includes(category))
+        {foodList
+          .filter((food) => food.category.includes(filterCategory))
           .filter((food) =>
-            food.foodname.toLowerCase().includes(searchValue.toLowerCase())
+            food.name.toLowerCase().includes(searchValue.toLowerCase())
           )
           .map((food, index) => (
             <FoodCard
               key={index}
-              foodName={food.foodname}
-              foodPrice={food.foodprice}
-              foodImg={food.foodimg}
-              foodIngredient={food.foodingredient}
-              foodCategory={food.foodcategory}
+              name={food.name}
+              price={food.price}
+              image={food.image}
+              ingredient={food.ingredient}
+              category={food.category}
             />
           ))}
       </div>

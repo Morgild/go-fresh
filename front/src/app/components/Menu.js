@@ -1,8 +1,8 @@
 "use client";
-import { foodList } from "../common/constants";
 import { FoodCard } from "./FoodCard";
 import { SalesTitle } from "./SalesTitle";
 import { useData } from "./providers/DataProvider";
+import { foodList } from "../common/constants";
 
 export const Menu = () => {
   const { searchValue, foods } = useData();
@@ -11,20 +11,20 @@ export const Menu = () => {
       <div className="max-w-[1280px] m-auto">
         <SalesTitle title="Эрэлт ихтэй хоолнууд" />
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          {foods
+          {foodList
             .filter((food) =>
-              food.foodname
+              food.name
                 .toLocaleLowerCase()
                 .includes(searchValue.toLocaleLowerCase())
             )
             .map((food, index) => (
               <FoodCard
                 key={index}
-                foodName={food.foodname}
-                foodPrice={food.foodprice}
-                foodImg={food.foodimg}
-                foodCategory={food.foodcategory}
-                foodIngredient={food.foodingredient}
+                name={food.name}
+                price={food.price}
+                image={food.image}
+                category={food.category}
+                ingredient={food.ingredient}
               />
             ))}
         </div>

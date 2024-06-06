@@ -15,34 +15,22 @@ const getCategories = (req, res) => {
   }
 };
 const addCategory = (req, res) => {
-  const { foodcategory } = req.body;
+  const { name } = req.body;
+
   try {
-    if (
-      !foodcategory ||
-      typeof foodcategory != "string" ||
-      !foodcategory.trim()
-    ) {
+    if (!name || typeof name != "string" || !name.trim()) {
       return res.status(409).json({ message: "Insert a valid category" });
     }
-    pool.query(
-      queries.checkCategoryExists,
-      [foodcategory.trim()],
-      (error, results) => {
-        if (results.rows.length) {
-          return res.status(409).send({ messgae: "Category already exists" });
-        }
-        pool.query(
-          queries.addCategory,
-          [foodcategory.trim()],
-          (error, results) => {
-            if (error) throw error;
-            return res
-              .status(201)
-              .send({ message: "Category created successfully" });
-          }
-        );
+    pool.query(queries.checkCategoryExists, [name.trim()], (error, results) => {
+      if (results.rows.length) {
+        return res.status(409).send({ messgae: "Category already exists" });
       }
-    );
+      pool.query(queries.addCategory, [name.trim()], (error, results) => {
+        return res
+          .status(201)
+          .send({ message: "Category created successfully" });
+      });
+    });
   } catch (err) {
     res.json(err);
   }

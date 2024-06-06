@@ -53,7 +53,7 @@ export const DataProvider = ({ children }) => {
   }, [basket]);
 
   const sumBasket = basket.reduce((sum, currentValue) => {
-    return sum + currentValue.foodPrice * currentValue.foodCount;
+    return sum + currentValue.price * currentValue.count;
   }, 0);
 
   useEffect(() => {

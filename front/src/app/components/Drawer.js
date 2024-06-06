@@ -9,8 +9,10 @@ export const Drawer = () => {
   const [dateTime, setDateTime] = useState("");
 
   function isInTimeRange() {
-    const currentHour = dateTime.slice(11, 14);
-    const currentMinute = dateTime.slice(14, 16);
+    const date = new Date();
+    const currentHour = date.getHours();
+    const currentMinute = date.getMinutes();
+    console.log(currentHour, currentMinute);
     if (currentHour < 11 && currentHour > 9) {
       return true;
     } else if (currentHour === 11 && currentMinute < 30) {
@@ -19,12 +21,9 @@ export const Drawer = () => {
       return false;
     }
   }
-  useEffect(() => {
-    console.log(dateTime);
-  }, []);
 
   return (
-    <div className="fixed overflow-hidden">
+    <div className="fixed overflow-hidden select-none">
       {showDrawer && (
         <div
           onClick={() => {
@@ -47,24 +46,26 @@ export const Drawer = () => {
           >
             <FaChevronLeft />
           </p>
-          <p className="text-xl w-full text-center text-black">Таны сагс</p>
+          <p className="text-xl w-full text-center font-semibold text-black">
+            Таны сагс
+          </p>
         </div>
         <div className="flex flex-col justify-start px-4 overflow-y-auto h-full ">
           <div className="flex flex-col justify-start h-full ">
             {basket.map((item, index) => (
               <BasketFoodCard
                 key={index}
-                foodImg={item.foodImg}
-                foodName={item.foodName}
-                foodCount={item.foodCount}
-                foodPrice={item.foodPrice}
-                foodIngredient={item.foodIngredient}
+                image={item.image}
+                name={item.name}
+                count={item.count}
+                price={item.price}
+                ingredient={item.ingredient}
               />
             ))}
           </div>
         </div>
         <div className="flex sticky justify-self-end w-full right-0  bottom-0 bg-white p-8 shadow-sm shadow-black">
-          <div className="w-1/2 flex flex-col text-lg">
+          <div className="w-1/2 flex flex-col text-lg select-none">
             <p className="font-normal">Нийт төлөх дүн</p>
             <p className="font-extrabold ">{numberFormat.format(sumBasket)}₮</p>
           </div>
@@ -73,7 +74,7 @@ export const Drawer = () => {
             onClick={() => {
               console.log(basket);
             }}
-            className="flex bg-main w-1/2 disabled:bg-gray disabled:cursor-default justify-center items-center text-white rounded-md py-2 px-4 text-base font-normal cursor-pointer"
+            className="flex bg-main w-1/2 disabled:bg-gray disabled:cursor-default justify-center items-center text-white select-none rounded-md py-2 px-4 text-base font-normal cursor-pointer"
           >
             Захиалах
           </button>

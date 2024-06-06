@@ -8,16 +8,16 @@ import { useData } from "./providers/DataProvider";
 
 export const FoodDetail = ({
   setShowDetail,
-  foodImg,
-  foodName,
-  foodPrice,
-  foodCategory,
-  foodIngredient,
+  image,
+  name,
+  price,
+  category,
+  ingredient,
 }) => {
-  const [foodCount, setFoodCount] = useState(1);
+  const [count, setCount] = useState(1);
   const { basket, setBasket, numberFormat } = useData();
   const changeFoodCount = (change) => {
-    setFoodCount((prev) => {
+    setCount((prev) => {
       if (change < 0 && prev == 1) return prev;
       return prev + change;
     });
@@ -36,14 +36,14 @@ export const FoodDetail = ({
             alt="food image"
             style={{ objectFit: "cover" }}
             fill
-            src={foodImg ? foodImg : "/gofresh.png"}
+            src={image ? image : "/gofresh.png"}
             sizes="medium"
           />
         </div>
         <div className="md:w-1/2 w-full flex flex-col gap-3 md:gap-5">
           <div className="flex flex-col gap-1">
             <div className="flex justify-between">
-              <h3 className="text-xl md:text-2xl text-black">{foodName}</h3>
+              <h3 className="text-xl md:text-2xl text-black">{name}</h3>
               <p className="cursor-pointer">
                 <IoMdClose
                   size={24}
@@ -55,13 +55,13 @@ export const FoodDetail = ({
             </div>
 
             <p className="text-sm md:text-lg font-semibold text-main">
-              {numberFormat.format(foodPrice)}₮
+              {numberFormat.format(price)}₮
             </p>
           </div>
           <div className="flex flex-col gap-3">
             <h3 className="text-sm md:text-lg font-semibold text-black">Орц</h3>
             <p className="text-base font-normal text-[#767676] rounded-lg p-2 bg-[#F6F6F6]">
-              {foodIngredient}
+              {ingredient}
             </p>
           </div>
           <h3 className="text-sm md:text-lg font-semibold text-black">Тоо</h3>
@@ -74,7 +74,9 @@ export const FoodDetail = ({
             >
               <FaMinus size={16} />
             </div>
-            <div className="text-black text-lg font-medium">{foodCount}</div>
+            <div className="text-black text-lg font-medium select-none">
+              {count}
+            </div>
             <div
               onClick={() => {
                 changeFoodCount(1);
@@ -88,9 +90,9 @@ export const FoodDetail = ({
             onClick={() => {
               let inBasket = false;
               const newBasket = basket.map((element) => {
-                if (element.foodName == foodName) {
+                if (element.name == name) {
                   inBasket = true;
-                  element.foodCount += foodCount;
+                  element.count += count;
                   return element;
                 } else {
                   return element;
@@ -100,12 +102,12 @@ export const FoodDetail = ({
                 setBasket([
                   ...basket,
                   {
-                    foodName,
-                    foodCategory,
-                    foodIngredient,
-                    foodPrice,
-                    foodImg,
-                    foodCount,
+                    name,
+                    category,
+                    ingredient,
+                    price,
+                    image,
+                    count,
                   },
                 ]);
               } else {
@@ -113,7 +115,7 @@ export const FoodDetail = ({
               }
               setShowDetail(false);
             }}
-            className="w-full rounded py-2 px-4 bg-main text-white"
+            className="w-full rounded py-2 px-4 bg-main text-white select-none"
           >
             Сагслах
           </button>

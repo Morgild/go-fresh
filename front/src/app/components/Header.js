@@ -20,7 +20,12 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-[4] bg-[#FFFFFFF0] shadow-xs shadow-black">
       <section className="flex justify-between bg-red-400 items-center max-w-[1280px] m-auto py-2 px-3 md:px-6 ">
-        <div className="flex gap-1 items-center cursor-pointer">
+        <div
+          onClick={() => {
+            router.push("/");
+          }}
+          className="flex gap-1 items-center cursor-pointer"
+        >
           <h1 className="text-black text-sm md:text-xl font-semibold">
             Go Fresh
           </h1>
