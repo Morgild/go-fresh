@@ -7,7 +7,7 @@ const getCategories = (req, res) => {
       if (error) throw error;
       res.status(200).json({
         data: results.rows,
-        message: "successfully gathered all categories",
+        message: "Successfully gathered all categories",
       });
     });
   } catch (err) {

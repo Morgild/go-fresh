@@ -16,7 +16,7 @@ export const ProfileDropDown = ({ user }) => {
           </a>
         ) : (
           <div className="flex flex-col">
-            <div className="flex w-full  gap-2 py-2 px-4 items-center">
+            <div className="flex w-full  gap-2 p-4 items-center">
               <figure className="relative w-full aspect-square rounded-full overflow-hidden flex items-center justify-center">
                 <Image
                   src={user.picture}

@@ -15,7 +15,7 @@ export default function MenuPage() {
         setFilterCategory={setFilterCategory}
         filterCategory={filterCategory}
       />
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 px-3 md:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 px-3 pb-10 md:px-0 ">
         {foodList
           .filter((food) => food.category.includes(filterCategory))
           .filter((food) =>

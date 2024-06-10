@@ -9,7 +9,18 @@ export const SalesTitle = (props) => {
         </figure>
         <p className="text-[#272727] text-xl font-bold">{props.title}</p>
       </div>
-      <div className="text-main flex items-center gap-1">
+      <div
+        onClick={() => {
+          props.setSeeAll((prev) => {
+            if (prev == 5) {
+              props.setSeeAll(props.length);
+            } else {
+              props.setSeeAll(5);
+            }
+          });
+        }}
+        className="text-main flex items-center gap-1 cursor-pointer"
+      >
         <p>Бүгдийг үзэх</p>
         <p className="text-2xl">&rsaquo;</p>
       </div>

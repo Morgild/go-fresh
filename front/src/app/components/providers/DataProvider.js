@@ -17,8 +17,8 @@ export const DataProvider = ({ children }) => {
 
   const getCategories = async () => {
     try {
-      const { data } = await api.get("/food/foodCategories");
-      setCategories(data);
+      const { data } = await api.get("/");
+      setCategories(data.data);
     } catch (error) {
       console.log(error), "FFF";
     }

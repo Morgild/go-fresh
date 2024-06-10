@@ -6,7 +6,7 @@ export const BasketFoodCard = ({ image, name, price, count, ingredient }) => {
   const { basket, setBasket, numberFormat } = useData();
   return (
     <div className="flex w-full p-3 gap-2 border-t border-t-[#D6D8DB]">
-      <figure className="w-1/2 aspect-[2/1] relative bg-gray rounded-lg overflow-hidden border border-gray">
+      <figure className="w-1/2 aspect-[2/1] relative bg-main rounded-lg overflow-hidden border border-gray">
         <Image
           alt="food image"
           style={{ objectFit: "cover" }}

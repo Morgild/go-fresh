@@ -4,8 +4,9 @@ import { useData } from "@/app/components/providers/DataProvider";
 
 export const Categories = ({ filterCategory, setFilterCategory }) => {
   const { categories } = useData();
+  console.log(categories);
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 py-8 px-3">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 py-8 px-4 ">
       {categories.map((category, index) => (
         <div
           key={index}
@@ -18,7 +19,7 @@ export const Categories = ({ filterCategory, setFilterCategory }) => {
               : "bg-white text-black"
           }`}
         >
-          <p className="text-lg">{category.name}</p>
+          <p className="text-md md:text-lg">{category.name}</p>
         </div>
       ))}
     </div>

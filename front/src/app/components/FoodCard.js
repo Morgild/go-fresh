@@ -13,9 +13,9 @@ export const FoodCard = ({ name, image, price, ingredient, category }) => {
         onClick={() => {
           setShowDetail(true);
         }}
-        className="flex flex-col rounded-lg p-2 gap-3 cursor-pointer select-none"
+        className="flex flex-col rounded-lg p-2 gap-3 cursor-pointer select-none "
       >
-        <figure className="relative w-full aspect-[3/2] rounded-lg overflow-hidden shadow-sm shadow-black">
+        <figure className="relative w-full aspect-[3/2] rounded-lg overflow-hidden shadow-sm shadow-black bg-main">
           <Image
             style={{ objectFit: "cover" }}
             alt="food"
